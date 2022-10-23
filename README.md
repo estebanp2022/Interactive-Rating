@@ -10,6 +10,8 @@
 
 ## Overview
 
+- Project still under construction!
+
 ### The challenge
 
 Users should be able to:
@@ -25,7 +27,7 @@ Users should be able to:
 
 ### Links
 
-[Live site URL](https://your-live-site-url.com)
+[Live site URL coming soon]()
 
 ## My process
 
