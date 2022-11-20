@@ -25,5 +25,5 @@ btn.addEventListener("click", function () {
   ratingCard.style.display = "none";
   submissionContainer.style.display = "flex";
 
-  customerSelection.innerText = `You selected ${selectedRating} out of 5`;
+  customerSelection.innerText = `You selected ${prevButton.textContent} out of 5`;
 });
