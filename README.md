@@ -10,8 +10,6 @@
 
 ## Overview
 
-- Project still under construction!
-
 ### The challenge
 
 Users should be able to:
