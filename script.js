@@ -1,31 +1,29 @@
 let btn = document.querySelector(".btn");
-let ratingContainer = document.querySelector(".rating");
 let submissionContainer = document.querySelector(".submission");
 let ratings = document.querySelectorAll(".ratings");
 let customerSelection = document.querySelector(".customer-selection");
-let ratingsContainer = document.getElementById("rating-container");
+let ratingContainer = document.getElementById("rating-container");
+let ratingCard = document.querySelector(".rating-card");
+let prevButton = null;
 
-function renderBtnColor() {
-  for (let rating of ratings) {
-    rating.addEventListener("click", function () {
-      rating.classList.toggle("highlight");
-    });
+// Rating Selection
+ratingContainer.addEventListener("click", (e) => {
+  const isButton = e.target.nodeName === "BUTTON";
+  if (!isButton) {
+    return;
   }
-}
+  e.target.classList.add("active");
 
-let selectedRating = ratingContainer.addEventListener("change", function (e) {
-  e.target.id;
+  if (prevButton !== null) {
+    prevButton.classList.remove("active");
+  }
+  prevButton = e.target;
 });
 
-// let testing = ratingsContainer.addEventListener("change", function (e) {
-//   console.log(e.target.id);
-// });
-
+// Submit Button
 btn.addEventListener("click", function () {
-  ratingContainer.style.display = "none";
+  ratingCard.style.display = "none";
   submissionContainer.style.display = "flex";
 
   customerSelection.innerText = `You selected ${selectedRating} out of 5`;
 });
-
-renderBtnColor();
