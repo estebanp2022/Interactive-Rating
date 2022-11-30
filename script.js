@@ -5,6 +5,7 @@ let customerSelection = document.querySelector(".customer-selection");
 let ratingContainer = document.getElementById("rating-container");
 let ratingCard = document.querySelector(".rating-card");
 let prevButton = null;
+btn.disabled = true;
 
 // Rating Selection
 ratingContainer.addEventListener("click", (e) => {
@@ -18,12 +19,14 @@ ratingContainer.addEventListener("click", (e) => {
     prevButton.classList.remove("active");
   }
   prevButton = e.target;
+  btn.disabled = false;
 });
 
 // Submit Button
 btn.addEventListener("click", function () {
   ratingCard.style.display = "none";
   submissionContainer.style.display = "flex";
-
   customerSelection.innerText = `You selected ${prevButton.textContent} out of 5`;
 });
+
+console.log(ratingContainer.clicked);
